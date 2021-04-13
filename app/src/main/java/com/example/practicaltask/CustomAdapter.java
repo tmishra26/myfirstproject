@@ -14,15 +14,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ListAdapter;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class CustomAdapter extends ArrayAdapter<Response> {
     Context context;
     List<Response> responseList;
-    public CustomAdapter(@NonNull Context context, @NonNull List<Response> responseList) {
+    Address address1;
+    Company company1;
+    Geo geo1;
+
+    public CustomAdapter(@NonNull Context context, @NonNull List<Response> responseList,
+                         Address address1,Company company1,Geo geo1) {
         super(context, R.layout.listviewitems, responseList);
         this.context = context;
         this.responseList = responseList;
+        this.company1 = company1;
+        this.address1 = address1;
+        this.geo1 = geo1;
+
     }
 
     @NonNull
@@ -31,6 +42,9 @@ public class CustomAdapter extends ArrayAdapter<Response> {
         LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowview = inflater.inflate(R.layout.listviewitems,null,true);
         Response response = responseList.get(position);
+        address1 = response.getAddress();
+        company1 = response.getCompany();
+        geo1 = address1.getGeo();
         TextView users = rowview.findViewById(R.id.users);
         TextView address = rowview.findViewById(R.id.address);
         TextView geo = rowview.findViewById(R.id.geo);
@@ -41,6 +55,24 @@ public class CustomAdapter extends ArrayAdapter<Response> {
         TextView phone = rowview.findViewById(R.id.phone);
         TextView website = rowview.findViewById(R.id.website);
         TextView username = rowview.findViewById(R.id.username);
+        TextView street = rowview.findViewById(R.id.street);
+        TextView suite = rowview.findViewById(R.id.suite);
+        TextView city = rowview.findViewById(R.id.city);
+        TextView zipcode = rowview.findViewById(R.id.zipcod);
+        TextView lat = rowview.findViewById(R.id.lat);
+        TextView lng = rowview.findViewById(R.id.lng);
+        TextView names = rowview.findViewById(R.id.namec);
+        TextView catchPhase = rowview.findViewById(R.id.catchPharse);
+        TextView bs = rowview.findViewById(R.id.bs);
+        street.setText(address1.getStreet());
+        suite.setText(address1.getSuite());
+        city.setText(address1.getCity());
+        zipcode.setText(address1.getZipcode());
+        lat.setText(geo1.getLat());
+        lng.setText(geo1.getLng());
+        names.setText(company1.getName());
+        catchPhase.setText(company1.getCatchPhrase());
+        bs.setText(company1.getBs());
         users.setText("Users");
         users.setTextColor(Color.BLACK);
         address.setText("Address");
@@ -55,6 +87,7 @@ public class CustomAdapter extends ArrayAdapter<Response> {
         phone.setText(response.getPhone());
         website.setText(response.getWebsite());
         username.setText(response.getUsername());
+
         return rowview;
     }
 }
