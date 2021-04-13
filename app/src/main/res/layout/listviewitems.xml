@@ -136,7 +136,9 @@
                 android:gravity="center"
                 android:textColor="@color/black"/>
         </LinearLayout>
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -175,6 +177,7 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -191,6 +194,7 @@
             android:id="@+id/company"
             android:layout_marginTop="10dp"
             android:text="Company"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -225,4 +229,10 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black">
+
+    </View>
 </LinearLayout>

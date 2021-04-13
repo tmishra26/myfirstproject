@@ -1,6 +1,7 @@
 package com.example.practicaltask;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,9 +42,13 @@ public class CustomAdapter extends ArrayAdapter<Response> {
         TextView website = rowview.findViewById(R.id.website);
         TextView username = rowview.findViewById(R.id.username);
         users.setText("Users");
+        users.setTextColor(Color.BLACK);
         address.setText("Address");
+        address.setTextColor(Color.BLACK);
         geo.setText("Geo");
+        geo.setTextColor(Color.BLACK);
         company.setText("Company");
+        company.setTextColor(Color.BLACK);
         id.setText(String.valueOf(response.getId()));
         name.setText(response.getName());
         email.setText(response.getEmail());
