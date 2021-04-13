@@ -8,5 +8,7 @@ import retrofit2.http.GET;
 public interface ApiManager {
     @GET("json")
     Call<ImName> getNames();
+    @GET("users")
+    Call<List<Response>> getUsersList();
 
 }
