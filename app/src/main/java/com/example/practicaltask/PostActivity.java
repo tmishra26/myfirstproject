@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,9 +19,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class PostActivity extends AppCompatActivity {
+  //  private ExpandableListView expandablelistview;
     private ListView listView;
     private static final String TAG = "PostActivity";
     List<Response> responseList=new ArrayList<>();
+    CustomAdapter customAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -35,8 +38,8 @@ public class PostActivity extends AppCompatActivity {
               if(response.isSuccessful()){
                   responseList = response.body();
                   Log.d(TAG, "onResponse: "+responseList.size());
-                 /* ArrayAdapter adapter = new ArrayAdapter<Response>(PostActivity.this,R.layout.listviewitems,responseList);
-                  listView.setAdapter(adapter);*/
+                  customAdapter = new CustomAdapter(PostActivity.this,responseList);
+                  listView.setAdapter(customAdapter);
               }
 
           }

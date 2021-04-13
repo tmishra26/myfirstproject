@@ -2,13 +2,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/users"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -19,6 +20,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/id"
@@ -27,6 +31,7 @@
                 android:text="id"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/name"
@@ -35,6 +40,7 @@
                 android:text="name"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/username"
@@ -43,6 +49,7 @@
                 android:text="username"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/email"
@@ -51,6 +58,7 @@
                 android:text="email"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/phone"
@@ -59,6 +67,7 @@
                 android:text="phone"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/website"
@@ -67,6 +76,7 @@
                 android:text="website"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
@@ -75,16 +85,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="20dp"
+            android:layout_marginTop="10dp"
             android:text="Address"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/street"
@@ -93,6 +106,7 @@
                 android:text="street"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/suite"
@@ -101,6 +115,7 @@
                 android:text="suite"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/city"
@@ -109,6 +124,7 @@
                 android:text="city"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/zipcod"
@@ -117,6 +133,7 @@
                 android:text="zipcode"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
@@ -127,14 +144,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:textStyle="bold"
             android:textSize="20dp"
+            android:id="@+id/geo"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
             android:text="Geo"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/lat"
@@ -143,6 +162,7 @@
                 android:text="lat"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/lng"
@@ -151,12 +171,15 @@
                 android:text="lng"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
@@ -165,10 +188,13 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="20dp"
+            android:id="@+id/company"
+            android:layout_marginTop="10dp"
             android:text="Company"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/namec"
@@ -177,6 +203,7 @@
                 android:text="name"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/catchPharse"
@@ -185,6 +212,7 @@
                 android:text="catchPharse"
                 android:textSize="15dp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/bs"
@@ -192,6 +220,7 @@
                 android:layout_height="wrap_content"
                 android:text="bs"
                 android:textSize="15dp"
+                android:gravity="center"
                 android:textStyle="normal"
                 android:textColor="@color/black"/>
         </LinearLayout>
